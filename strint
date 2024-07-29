@@ -1,0 +1,41 @@
+import java.util.Scanner;
+import java.util.Arrays;
+class Main{
+    
+    public static void main(String[] args){
+    int lastnum=0;
+    String abc="";
+    Scanner k=new Scanner(System.in);
+    System.out.println("enter any words");
+    String word=k.next();
+    StringBuffer str=new StringBuffer();
+   
+    
+    
+    for (int i=0;i<word.length();i++){
+    char ns=word.charAt(i);
+   
+    if((ns>='a' && ns<='z') || ns>'A' && ns<='Z')
+        str=str.append(ns);
+    
+      else{
+    
+    StringBuffer num=new StringBuffer();
+    num=num.append(ns);
+    abc=num.toString();
+    lastnum=Integer.parseInt(abc);
+     for(int j=0;j<=lastnum-1;j++)
+      System.out.print(str);
+      str=str.delete(0,str.length());
+      
+      
+      
+      }
+      
+      
+   
+    }
+    
+
+    }
+}
